@@ -1,0 +1,17 @@
+1-which filed of customer table is primery key?
+ans-we are defining that atribute as primery key which have contain unique value and not contain null value
+	in customer table Cnum is primery kay
+2-what is another word for row and column?
+ans-for row another word is entity,opertunity.
+    for column another word is attribute,method.
+
+3-what is frouth column of coutomer?
+ans-Rating
+
+4-why is not it possible to see frist five rows of the table?
+ans- when you insert row into table system finds the free space in database server 
+hard disk it will store row at that place the resone that RDBMS does this is to speed up the 
+insert statement when you select table the order of row in outputis depents on the row address 
+it will always the asending order of row address when you update the row if the row length is incressing
+thats the entire row may be move to some other address that why we are not able to print frist five rows from
+table   
