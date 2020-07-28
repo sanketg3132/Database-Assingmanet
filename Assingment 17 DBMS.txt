@@ -1,0 +1,38 @@
+1) Create the Orders table so that all onum values as well as all combinations of
+   cnum and snum are different from one another, and so that NULL values are
+   excluded from the date field.
+SQL
+===
+      create table orders2
+      (
+	onum int,
+        snum int,
+        cnum int,
+        o1date date not null,
+        constraint p_composite primary key(onum,snum,cnum)
+      );
+
+2) Create the Salespeople table so that the default commission is 10% with no
+   NULLS permitted, snum is the primary key, and all names fall alphabetically
+   between A and M, inclusive (assume all names will be uppercase).
+SQL
+===
+	create table salespeople1
+        (
+           snum int primary key,
+           sname check(substr(upper(sname),1,1) between "A" and "M")
+           comm default 0.1 not null,
+        );
+
+3) Create the Orders table, making sure that the onum is greater than the cnum, and
+   the cnum is greater that the snum. Allow no NULLS in any of these three fields.
+SQL
+===
+	create table orders3
+       (
+	onum int not null,
+        snum int not null,
+        cnum int not null,
+       check(onum>cnum and cnum>snum)
+       );
+
